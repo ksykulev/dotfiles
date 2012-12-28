@@ -6,7 +6,7 @@ filetype plugin indent on
 
 set backspace=indent,eol,start
 
-set hidden
+set hidden                        " Hide buffers when they are abandoned
 
 set wildmenu                      " Command line completion
 set wildmode=list:longest         " Complete files like shell
@@ -18,6 +18,12 @@ set number                        " Show line numbers
 set ruler                         " Show cursor position
 
 set title                         " Set the terminal's title
+
 set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
 
 set laststatus=2 
+
+set list                          " Visual whitespace
+set listchars=tab:\ \ ,trail:.
+
+set nowrap                        " No wrap duh!
