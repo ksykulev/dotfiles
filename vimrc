@@ -47,7 +47,7 @@ set statusline=%f                 " Show Full Path of file
 
 set tabstop=2                     " tabs space is 2
 set list                          " Visual whitespace
-set listchars=tab:\ \ ,trail:.
+set listchars=tab:\ \ ,trail:.,extends:#,nbsp:.
 
 set incsearch                     " Highlight Incremental searching
 
@@ -60,6 +60,14 @@ set nofoldenable        "dont fold by default
 set foldlevel=1
 set foldcolumn=1
 " autocmd FileType ruby setlocal foldmethod=syntax
+
+"t 1.5
+"	foldingStartMarker = '^.*\bfunction\s*(\w+\s*)?\([^\)]*\)(\s*\{[^\}]*)?\s*$';
+"	foldingStopMarker = '^\s*\}';
+
+"t 2.0
+"foldingStartMarker = '\{\s*(//.*)?$|\[\s*(//.*)?$|\(\s*(//.*)?$';
+"foldingStopMarker = '^\s*\}|^\s*\]|^\s*\)';
 
 let javaScript_fold=1   " JavaScript
 let php_folding=1       " PHP
