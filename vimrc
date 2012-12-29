@@ -12,6 +12,10 @@ Bundle 'gmarik/vundle'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
+Bundle 'tComment'
+Bundle 'mru.vim'
+Bundle 'matchit.zip'
+Bundle 'ack.vim'
 
 filetype plugin indent on
 
@@ -44,5 +48,10 @@ set list                          " Visual whitespace
 set listchars=tab:\ \ ,trail:.
 
 set nowrap                        " No wrap duh!
+
+" colors for popup menu
+:highlight Pmenu ctermfg=White ctermbg=Blue guifg=White ctermbg=Blue
+:highlight PmenuSel ctermbg=White guibg=White ctermfg=Blue guifg=Blue
+:highlight Search term=reverse ctermbg=Blue guibg=Blue ctermfg=White
 
 map <Leader>t :FufFile<Enter>

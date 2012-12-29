@@ -1,0 +1,5 @@
+--type-add=php=.ctp
+--type-set=coffee=.coffee
+--type-set=erb=.erb
+--type-set=scss=.scss
+--type-set=sass=.sass
