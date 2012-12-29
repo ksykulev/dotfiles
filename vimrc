@@ -16,6 +16,7 @@ Bundle 'tComment'
 Bundle 'mru.vim'
 Bundle 'matchit.zip'
 Bundle 'ack.vim'
+Bundle 'bufexplorer.zip'
 
 filetype plugin indent on
 
@@ -42,16 +43,37 @@ set title                         " Set the terminal's title
 set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
 
 set laststatus=2
+set statusline=%f                 " Show Full Path of file
 
 set tabstop=2                     " tabs space is 2
 set list                          " Visual whitespace
 set listchars=tab:\ \ ,trail:.
 
+set incsearch                     " Highlight Incremental searching
+
 set nowrap                        " No wrap duh!
+
+" Folding settings
+set foldmethod=syntax   "fold based on indent
+set foldnestmax=10      "deepest fold is 10 levels
+set nofoldenable        "dont fold by default
+set foldlevel=1
+set foldcolumn=1
+" autocmd FileType ruby setlocal foldmethod=syntax
+
+let javaScript_fold=1   " JavaScript
+let php_folding=1       " PHP
+let ruby_fold=1         " Ruby
 
 " colors for popup menu
 :highlight Pmenu ctermfg=White ctermbg=Blue guifg=White ctermbg=Blue
 :highlight PmenuSel ctermbg=White guibg=White ctermfg=Blue guifg=Blue
 :highlight Search term=reverse ctermbg=Blue guibg=Blue ctermfg=White
+:highlight Folded ctermbg=DarkGreen ctermfg=White guibg=DarkGreen guifg=White
 
+" quick mapping for fuzzyfinder to \t
 map <Leader>t :FufFile<Enter>
+
+" Handles reselection of visual indent/outdent
+vmap > >gv
+vmap < <gv
