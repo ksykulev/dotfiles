@@ -45,9 +45,12 @@ set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
 set laststatus=2
 set statusline=%f                 " Show Full Path of file
 
+"set noexpandtab                  " Use tabs for tab key
+"set expandtab                    " Use spaces for tabs
+set shiftwidth=2									" Indentation
 set tabstop=2                     " tabs space is 2
 set list                          " Visual whitespace
-set listchars=tab:\ \ ,trail:.,extends:#,nbsp:.
+set listchars=tab:>\ ,trail:.,extends:#,nbsp:.
 
 set incsearch                     " Highlight Incremental searching
 
@@ -78,6 +81,7 @@ let ruby_fold=1         " Ruby
 :highlight PmenuSel ctermbg=White guibg=White ctermfg=Blue guifg=Blue
 :highlight Search term=reverse ctermbg=Blue guibg=Blue ctermfg=White
 :highlight Folded ctermbg=DarkGreen ctermfg=White guibg=DarkGreen guifg=White
+:highlight SpecialKey ctermfg=DarkGray
 
 " quick mapping for fuzzyfinder to \t
 map <Leader>t :FufFile<Enter>
