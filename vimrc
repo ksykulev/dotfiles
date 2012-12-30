@@ -17,6 +17,8 @@ Bundle 'mru.vim'
 Bundle 'matchit.zip'
 Bundle 'ack.vim'
 Bundle 'bufexplorer.zip'
+Bundle 'ctrlp.vim'
+Bundle "pangloss/vim-javascript"
 
 filetype plugin indent on
 
@@ -47,7 +49,7 @@ set statusline=%f                 " Show Full Path of file
 
 "set noexpandtab                  " Use tabs for tab key
 "set expandtab                    " Use spaces for tabs
-set shiftwidth=2									" Indentation
+set shiftwidth=2                  " Indentation
 set tabstop=2                     " tabs space is 2
 set list                          " Visual whitespace
 set listchars=tab:>\ ,trail:.,extends:#,nbsp:.
@@ -83,8 +85,14 @@ let ruby_fold=1         " Ruby
 :highlight Folded ctermbg=DarkGreen ctermfg=White guibg=DarkGreen guifg=White
 :highlight SpecialKey ctermfg=DarkGray
 
-" quick mapping for fuzzyfinder to \t
-map <Leader>t :FufFile<Enter>
+" quick mapping for fuzzyfinder to \o (o for open)
+map <Leader>o :FufFile<Enter>
+" quick mapping for ctrlp
+map <Leader>t :CtrlP<Enter>
+let g:ctrlp_map=''                           " Don't use <C-P>, that's mine
+let g:ctrlp_working_path_mode = 'ra'         " nearest .git ancestor
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+let g:ctrlp_custom_ignore = { 'dir': '\v[\/]\.(git|hg|svn)$', 'file': '\v\.(exe|so|dll|DS_STORE)$' }
 
 " Handles reselection of visual indent/outdent
 vmap > >gv
