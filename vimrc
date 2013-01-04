@@ -45,7 +45,8 @@ set title                         " Set the terminal's title
 set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
 
 set laststatus=2
-set statusline=%f                 " Show Full Path of file
+set statusline=%f\                " Show Full Path of file
+set statusline+=%(%m%r\ %)        " buffer info (modified, read-only etc...)
 
 "set noexpandtab                  " Use tabs for tab key
 "set expandtab                    " Use spaces for tabs
@@ -91,6 +92,8 @@ map <Leader>o :FufFile<Enter>
 map <Leader>t :CtrlP<Enter>
 let g:ctrlp_map=''                           " Don't use <C-P>, that's mine
 let g:ctrlp_working_path_mode = 'ra'         " nearest .git ancestor
+let g:ctrlp_max_height = 20                  " ctrlP height
+let g:ctrlp_max_files = 0                    " No limit to file search
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 let g:ctrlp_custom_ignore = { 'dir': '\v[\/]\.(git|hg|svn)$', 'file': '\v\.(exe|so|dll|DS_STORE)$' }
 
