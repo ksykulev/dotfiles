@@ -46,7 +46,7 @@ set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
 
 set laststatus=2
 set statusline=%f\                " Show Full Path of file
-set statusline+=%(%m%r\ %)        " buffer info (modified, read-only etc...)
+set statusline+=%2*%m%r%*         " buffer info (modified, read-only etc...)
 
 "set noexpandtab                  " Use tabs for tab key
 "set expandtab                    " Use spaces for tabs
@@ -80,7 +80,7 @@ let php_folding=1       " PHP
 let ruby_fold=1         " Ruby
 
 "" when ~/.vimrc is changed, autoload
-autocmd! BufWritePost .vimrc source %
+autocmd BufWritePost .vimrc source %
 " autocmd! BufWritePost .gvimrc source %
 
 " color overrides
