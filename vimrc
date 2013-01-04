@@ -89,6 +89,7 @@ autocmd! BufWritePost .vimrc source %
 :highlight Search term=reverse ctermbg=Blue guibg=Blue ctermfg=White
 :highlight Folded ctermbg=DarkGreen ctermfg=White guibg=DarkGreen guifg=White
 :highlight SpecialKey ctermfg=DarkGray
+:highlight Visual ctermbg=LightGreen ctermfg=Black
 
 " quick mapping for fuzzyfinder to \o (o for open)
 map <Leader>o :FufFile<Enter>
