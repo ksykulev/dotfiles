@@ -29,7 +29,7 @@ syntax enable
 
 set backspace=indent,eol,start
 
-set hidden                        " Hide buffers when they are abandoned
+set hidden                        " Allow buffers with unsaved changes
 
 set wildmenu                      " Command line completion
 set wildmode=list:longest         " Complete files like shell
@@ -68,8 +68,8 @@ set foldcolumn=1
 " autocmd FileType ruby setlocal foldmethod=syntax
 
 "t 1.5
-"	foldingStartMarker = '^.*\bfunction\s*(\w+\s*)?\([^\)]*\)(\s*\{[^\}]*)?\s*$';
-"	foldingStopMarker = '^\s*\}';
+"foldingStartMarker = '^.*\bfunction\s*(\w+\s*)?\([^\)]*\)(\s*\{[^\}]*)?\s*$';
+"foldingStopMarker = '^\s*\}';
 
 "t 2.0
 "foldingStartMarker = '\{\s*(//.*)?$|\[\s*(//.*)?$|\(\s*(//.*)?$';
@@ -79,7 +79,11 @@ let javaScript_fold=1   " JavaScript
 let php_folding=1       " PHP
 let ruby_fold=1         " Ruby
 
-" colors for popup menu
+"" when ~/.vimrc is changed, autoload
+autocmd! BufWritePost .vimrc source %
+" autocmd! BufWritePost .gvimrc source %
+
+" color overrides
 :highlight Pmenu ctermfg=White ctermbg=Blue guifg=White ctermbg=Blue
 :highlight PmenuSel ctermbg=White guibg=White ctermfg=Blue guifg=Blue
 :highlight Search term=reverse ctermbg=Blue guibg=Blue ctermfg=White
