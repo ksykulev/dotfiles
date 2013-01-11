@@ -31,6 +31,10 @@ set backspace=indent,eol,start
 
 set hidden                        " Allow buffers with unsaved changes
 
+set nolazyredraw                  " Don't redraw when don't have to
+
+set nostartofline                 " Don't jump to start of line
+
 set wildmenu                      " Command line completion
 set wildmode=list:longest         " Complete files like shell
 
