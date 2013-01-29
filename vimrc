@@ -19,6 +19,7 @@ Bundle 'ack.vim'
 Bundle 'bufexplorer.zip'
 Bundle 'ctrlp.vim'
 Bundle "pangloss/vim-javascript"
+Bundle "StanAngeloff/php.vim"
 
 filetype plugin indent on
 
