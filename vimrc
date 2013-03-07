@@ -65,7 +65,7 @@ set incsearch                     " Highlight Incremental searching
 set nowrap                        " No wrap duh!
 
 " Folding settings
-set foldmethod=syntax   "fold based on indent
+set foldmethod=indent   "fold based on indent
 set foldnestmax=10      "deepest fold is 10 levels
 set nofoldenable        "dont fold by default
 set foldlevel=1
@@ -110,3 +110,9 @@ let g:ctrlp_custom_ignore = { 'dir': '\v[\/]\.(git|hg|svn)$', 'file': '\v\.(exe|
 " Handles reselection of visual indent/outdent
 vmap > >gv
 vmap < <gv
+
+" Because pasting from other applications into vim is stupid
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
+filetype indent off
