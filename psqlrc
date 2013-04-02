@@ -1,0 +1,13 @@
+-- I don't need to hear about everything you are setting..
+\set QUIET ON
+
+-- auto format in rows when columns don't fit
+\x auto
+
+-- history size
+\set HISTSIZE 2000
+
+-- turn on timing by default
+\timing
+
+\set QUIET OFF
