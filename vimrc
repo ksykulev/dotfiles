@@ -20,6 +20,7 @@ Bundle 'bufexplorer.zip'
 Bundle 'ctrlp.vim'
 Bundle "pangloss/vim-javascript"
 Bundle "StanAngeloff/php.vim"
+Bundle "tpope/vim-fugitive"
 
 filetype plugin indent on
 
