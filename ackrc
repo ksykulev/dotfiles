@@ -3,3 +3,4 @@
 --type-set=erb=.erb
 --type-set=scss=.scss
 --type-set=sass=.sass
+--type-set=handlebars=.handlebars,.hbs
