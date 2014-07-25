@@ -21,6 +21,9 @@ Bundle 'ctrlp.vim'
 Bundle "pangloss/vim-javascript"
 Bundle "StanAngeloff/php.vim"
 Bundle "tpope/vim-fugitive"
+Bundle "kchmck/vim-coffee-script"
+Bundle 'heartsentwined/vim-emblem'
+Bundle 'rstacruz/sparkup'
 
 filetype plugin indent on
 
@@ -55,7 +58,7 @@ set statusline=%f\                " Show Full Path of file
 set statusline+=%2*%m%r%*         " buffer info (modified, read-only etc...)
 
 "set noexpandtab                  " Use tabs for tab key
-"set expandtab                    " Use spaces for tabs
+set expandtab                     " Use spaces for tabs
 set shiftwidth=2                  " Indentation
 set tabstop=2                     " tabs space is 2
 set list                          " Visual whitespace
