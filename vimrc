@@ -23,7 +23,8 @@ Bundle "StanAngeloff/php.vim"
 Bundle "tpope/vim-fugitive"
 Bundle "kchmck/vim-coffee-script"
 Bundle 'heartsentwined/vim-emblem'
-Bundle 'rstacruz/sparkup'
+" Bundle 'rstacruz/sparkup'
+Bundle 'mustache/vim-mustache-handlebars'
 
 filetype plugin indent on
 
