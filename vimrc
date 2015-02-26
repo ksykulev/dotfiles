@@ -25,6 +25,8 @@ Bundle "kchmck/vim-coffee-script"
 Bundle 'heartsentwined/vim-emblem'
 " Bundle 'rstacruz/sparkup'
 Bundle 'mustache/vim-mustache-handlebars'
+" Bundle 'ngmy/vim-rubocop'
+Bundle 'scrooloose/syntastic'
 
 filetype plugin indent on
 
@@ -110,7 +112,10 @@ let g:ctrlp_working_path_mode = 'ra'         " nearest .git ancestor
 let g:ctrlp_max_height = 20                  " ctrlP height
 let g:ctrlp_max_files = 0                    " No limit to file search
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
-let g:ctrlp_custom_ignore = { 'dir': '\v[\/]\.(git|hg|svn)$', 'file': '\v\.(exe|so|dll|DS_STORE)$' }
+let g:ctrlp_custom_ignore = { 'dir': '\v[\/]\.(git|hg|svn|node_modules)$', 'file': '\v\.(exe|so|dll|DS_STORE)$' }
+
+" Syntastic
+let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 
 " Handles reselection of visual indent/outdent
 vmap > >gv
