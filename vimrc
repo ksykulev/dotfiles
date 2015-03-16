@@ -27,6 +27,7 @@ Bundle 'heartsentwined/vim-emblem'
 Bundle 'mustache/vim-mustache-handlebars'
 " Bundle 'ngmy/vim-rubocop'
 Bundle 'scrooloose/syntastic'
+Bundle 'airblade/vim-gitgutter'
 
 filetype plugin indent on
 
@@ -96,12 +97,17 @@ autocmd BufWritePost .vimrc source %
 " autocmd! BufWritePost .gvimrc source %
 
 " color overrides
+:highlight clear SignColumn
 :highlight Pmenu ctermfg=White ctermbg=Blue guifg=White ctermbg=Blue
 :highlight PmenuSel ctermbg=White guibg=White ctermfg=Blue guifg=Blue
 :highlight Search term=reverse ctermbg=Blue guibg=Blue ctermfg=White
 :highlight Folded ctermbg=DarkGreen ctermfg=White guibg=DarkGreen guifg=White
 :highlight SpecialKey ctermfg=DarkGray
 :highlight Visual ctermbg=LightGreen ctermfg=Black
+:highlight GitGutterAdd ctermfg=Green guifg=DarkGreen
+:highlight GitGutterChange ctermfg=Yellow guifg=DarkYellow
+:highlight GitGutterDelete ctermfg=Red guifg=DarkRed
+:highlight GitGutterChangeDelete ctermfg=Yellow guifg=DarkYellow
 
 " quick mapping for fuzzyfinder to \o (o for open)
 map <Leader>o :FufFile<Enter>
@@ -120,6 +126,10 @@ let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 " Handles reselection of visual indent/outdent
 vmap > >gv
 vmap < <gv
+
+" Git-Gutter
+let g:gitgutter_realtime = 0
+let g:gitgutter_eager = 0
 
 " Because pasting from other applications into vim is stupid
 nnoremap <F2> :set invpaste paste?<CR>
