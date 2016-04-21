@@ -17,3 +17,6 @@
 
 -- prompt 2
 \set PROMPT2 '-> '
+
+-- null character
+\pset null ¤
