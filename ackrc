@@ -4,3 +4,6 @@
 --type-set=scss=.scss
 --type-set=sass=.sass
 --type-set=handlebars=.handlebars,.hbs
+
+--ignore-dir=log
+--ignore-dir=tmp
