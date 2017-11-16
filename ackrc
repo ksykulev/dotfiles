@@ -7,3 +7,4 @@
 
 --ignore-dir=log
 --ignore-dir=tmp
+--ignore-dir=coverage
