@@ -28,6 +28,7 @@ Bundle 'mustache/vim-mustache-handlebars'
 " Bundle 'ngmy/vim-rubocop'
 Bundle 'scrooloose/syntastic'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'fatih/vim-go'
 
 filetype plugin indent on
 
@@ -109,6 +110,8 @@ autocmd BufWritePost .vimrc source %
 :highlight GitGutterDelete ctermfg=Red guifg=DarkRed
 :highlight GitGutterChangeDelete ctermfg=Yellow guifg=DarkYellow
 
+noremap <Leader>[ gT
+noremap <Leader>] gt
 " quick mapping for fuzzyfinder to \o (o for open)
 map <Leader>o :FufFile<Enter>
 " quick mapping for ctrlp
