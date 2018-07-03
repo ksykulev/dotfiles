@@ -29,6 +29,7 @@ Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'scrooloose/syntastic'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'fatih/vim-go'
+Bundle 'vim-airline/vim-airline'
 
 filetype plugin indent on
 
@@ -66,6 +67,7 @@ set statusline+=%2*%m%r%*         " buffer info (modified, read-only etc...)
 set expandtab                     " Use spaces for tabs
 set shiftwidth=2                  " Indentation
 set tabstop=2                     " tabs space is 2
+set autoindent                    " next line to automatically be indented
 set list                          " Visual whitespace
 set listchars=tab:>\ ,trail:.,extends:#,nbsp:.
 
@@ -139,3 +141,12 @@ nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
 filetype indent off
+
+" vim-airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'default'
+let g:airline#extensions#tabline#show_splits = 0
+let g:airline#extensions#tabline#show_tab_type = 0
+let g:airline#extensions#tabline#show_tab_nr = 1
+let g:airline#extensions#tabline#tab_nr_type = 1
+let g:airline#extensions#tabline#show_close_button = 0
