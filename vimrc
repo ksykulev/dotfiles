@@ -2,35 +2,36 @@ set nocompatible
 
 " VUNDLE
 filetype off                      " required!
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 " vim-scripts repos
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-Bundle 'tComment'
-Bundle 'mru.vim'
-Bundle 'matchit.zip'
-Bundle 'ack.vim'
-Bundle 'bufexplorer.zip'
-Bundle 'ctrlp.vim'
-Bundle "pangloss/vim-javascript"
-Bundle "StanAngeloff/php.vim"
-Bundle "tpope/vim-fugitive"
-Bundle "kchmck/vim-coffee-script"
-Bundle 'heartsentwined/vim-emblem'
-" Bundle 'rstacruz/sparkup'
-Bundle 'mustache/vim-mustache-handlebars'
-" Bundle 'ngmy/vim-rubocop'
-Bundle 'scrooloose/syntastic'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'fatih/vim-go'
-Bundle 'vim-airline/vim-airline'
+Plugin 'L9'
+Plugin 'FuzzyFinder'
+Plugin 'tComment'
+Plugin 'mru.vim'
+Plugin 'matchit.zip'
+Plugin 'ack.vim'
+Plugin 'bufexplorer.zip'
+Plugin 'ctrlp.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'StanAngeloff/php.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'heartsentwined/vim-emblem'
+" Plugin 'rstacruz/sparkup'
+Plugin 'mustache/vim-mustache-handlebars'
+" Plugin 'ngmy/vim-rubocop'
+Plugin 'scrooloose/syntastic'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'fatih/vim-go'
+Plugin 'vim-airline/vim-airline'
 
+call vundle#end()
 filetype plugin indent on
 
 " END VUNDLE
