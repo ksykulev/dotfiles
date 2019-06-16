@@ -14,3 +14,4 @@ $ git config --global user.name "Konstantin Sykulev"
 
 $ git config --global user.email konst@sykulev.com
 
+$ git config --global core.editor vim
