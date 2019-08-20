@@ -112,6 +112,7 @@ autocmd BufWritePost .vimrc source %
 :highlight GitGutterChange ctermfg=Yellow guifg=DarkYellow
 :highlight GitGutterDelete ctermfg=Red guifg=DarkRed
 :highlight GitGutterChangeDelete ctermfg=Yellow guifg=DarkYellow
+set background=dark
 
 noremap <Leader>[ gT
 noremap <Leader>] gt
